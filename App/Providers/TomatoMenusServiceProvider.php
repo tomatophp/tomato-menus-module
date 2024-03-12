@@ -7,6 +7,8 @@ use Illuminate\Support\ServiceProvider;
 use TomatoPHP\TomatoAdmin\Facade\TomatoMenu;
 use TomatoPHP\TomatoAdmin\Services\Contracts\Menu;
 
+include __DIR__ . "/helpers.php";
+
 class TomatoMenusServiceProvider extends ServiceProvider
 {
     protected string $moduleName = 'TomatoMenus';
