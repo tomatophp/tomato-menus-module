@@ -42,7 +42,7 @@ class TomatoMenusServiceProvider extends ServiceProvider
 
         TomatoMenu::register(
             Menu::make()
-                ->label(trans('tomato-menus::messages.title'))
+                ->label(__('Menus'))
                 ->group(__('Tools'))
                 ->icon("bx bx-menu")
                 ->route("admin.menus.index"),

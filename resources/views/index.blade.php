@@ -88,7 +88,7 @@
                                 <x-splade-form preserve-scroll method="POST" action="{{$menu ? route('admin.menus.item', $menu['id']) : '#'}}">
                                     <div class="border-b border-gray-200 dark:border-gray-700 flex flex-col space-y-4 justify-start p-4 w-full">
                                         <x-splade-input name="url" label="{{__('URL')}}" placeholder="https://" />
-                                        <x-splade-input name="name" label="{{__('Link Text')}}" placeholder="Input your text here" />
+                                        <x-splade-input name="name" label="{{__('Link Text')}}" placeholder="{{ __('Input your text') }}" />
                                     </div>
                                     <div class="p-4 flex justify-end">
                                         <x-tomato-admin-submit :class="(!$menu ? 'bg-gray-300 hover:bg-gray-300 w-full' : 'w-full')" :disabled="!$menu" spinner :label="__('Add To Menu')" />
@@ -143,9 +143,9 @@
                                                         <div class="border-b border-gray-200 dark:border-gray-700 flex flex-col gap-4 justify-start p-4 w-full">
                                                             <x-splade-input name="id" type="hidden"/>
                                                             <x-splade-input name="url" label="{{__('URL')}}" placeholder="https://" />
-                                                            <x-tomato-translation name="name" label="{{__('Link Text')}}" :placeholder="__('Input your text here')" />
+                                                            <x-tomato-translation name="name" label="{{__('Link Text')}}" :placeholder="__('Input your text')" />
                                                             <x-tomato-admin-icon name="icon" label="{{__('Icon')}}" placeholder="{{__('Icon')}}" />
-                                                            <x-splade-select name="target" label="{{__('Open On')}}" :placeholder="__('Input your text here')">
+                                                            <x-splade-select name="target" label="{{__('Open On')}}">
                                                                 <option value="_self">{{__('Same Page')}}</option>
                                                                 <option value="_blank">{{__('New Page')}}</option>
                                                             </x-splade-select>
